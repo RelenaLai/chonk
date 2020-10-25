@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
+import ratings from './ratings.json'
 import {
   Wrapper,
   Title,
@@ -29,13 +30,15 @@ function App() {
   const rate = () => {
     (async () => {
       const img = document.getElementById("img");
-
+      const ratelist = [ratings.UNCHONKY, ratings.CHONKYISH, ratings.CHONKY];
       // Load the model.
       const model = await cocoSsd.load();
-
       // Classify the image.
-      const predictions = await model.detect(file);
-
+      const predictions = await model.detect(img);
+      let cat_ratio = predictions[0].bbox[2]/predictions[0].bbox[3];
+      cat_ratio = cat_ratio >= 1 ? 2 : Math.round(cat_ratio);
+      let rand = Math.floor(Math.random()*ratelist[cat_ratio].length);
+      console.log(ratelist[cat_ratio][rand]);
       console.log("Predictions: ");
       console.log(predictions);
     })();
