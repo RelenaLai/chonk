@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Input, Image } from "./styled";
+import { Button, Input, Image, UploadWrapper } from "./styled";
 
 const Upload = ({
   file,
@@ -9,7 +9,7 @@ const Upload = ({
   hiddenFileInput,
   buttonTag,
 }) => (
-  <div>
+  <UploadWrapper>
     {file && (
       <Image
         src={URL.createObjectURL(file)}
@@ -24,7 +24,7 @@ const Upload = ({
       ref={hiddenFileInput}
       accept='image/*'
     ></Input>
-  </div>
+  </UploadWrapper>
 );
 
 export default Upload;

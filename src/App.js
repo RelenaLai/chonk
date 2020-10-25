@@ -29,7 +29,7 @@ function App() {
   return (
     <Wrapper>
       <Title>Chonkii.</Title>
-      <Subtitle>how chonky is your cat</Subtitle>
+      <Subtitle>how chonky is your cat? 🐱</Subtitle>
       <Upload
         file={file}
         handleClick={handleClick}
