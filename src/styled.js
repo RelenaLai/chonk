@@ -4,9 +4,8 @@ export const Wrapper = styled.main`
   height: 100%;
   width: 50%;
   margin: auto;
-  padding-top: 5%;
+  padding-top: 3%;
   text-align: center;
-  font-family: Tahoma, Geneva, sans-serif;
 `;
 
 export const Title = styled.h1`
@@ -16,6 +15,7 @@ export const Title = styled.h1`
   font-size: 100px;
   margin-top: -50px;
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 `;
 
 export const Subtitle = styled.h2`
@@ -23,6 +23,7 @@ export const Subtitle = styled.h2`
   margin: -10px;
   padding: 0;
   text-align: center;
+  font-family: 'Lato', sans-serif;
   animation: colorchange 10s infinite alternate;
 
   @keyframes colorchange {
@@ -66,8 +67,9 @@ export const Button = styled.button`
   background-color: black;
   margin: 0px;
   margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
+  font-weight: 600;
   padding: 10px;
   text-align: center;
   transition: 0.2s;
@@ -107,14 +109,16 @@ export const Input = styled.input`
 export const Image = styled.img`
   max-width: 60%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
+  margin: 2em auto 1em auto;
 `;
 
-export const Result = styled.div`
+export const Score = styled.div`
   font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+`;
+
+export const Rating = styled.div`
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
 `;
