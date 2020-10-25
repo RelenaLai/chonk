@@ -2,8 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     :root {
-        --background-color: #282c34;
-        --primary-color: white;
+        --background-color: white;
     }
 
     html {
@@ -17,7 +16,7 @@ export default createGlobalStyle`
     }
 
     body {
-        background-color: var(--primary-color);
+        background-color: var(--background-color);
         width: 100%;
         height: 100%;
         margin: 0;
